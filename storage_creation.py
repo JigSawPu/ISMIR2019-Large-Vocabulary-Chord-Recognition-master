@@ -14,10 +14,10 @@ def create_jams_storage():
     jam.activate_proxy('cqt',thread_number=8,free=True)
     jam.append_extractor(FrameCount,'n_frame',source='cqt')
     jam.activate_proxy('n_frame',thread_number=8,free=True)
-    storage_jam_xchord=FramedH5DataStorage('d:/jams_xchord',dtype=np.int16)
+    storage_jam_xchord=FramedH5DataStorage('d:/jams_xchord',dtype=np.int32)
     if(not storage_jam_xchord.created):
         storage_jam_xchord.create_and_cache(jam.entries,'xchord')
-    storage_jam_xchord=FramedH5DataStorage('d:/jams_cqt',dtype=np.int16)
+    storage_jam_xchord=FramedH5DataStorage('d:/jams_cqt',dtype=np.int32)
     if(not storage_jam_xchord.created):
         storage_jam_xchord.create_and_cache(jam.entries,'cqt')
 
