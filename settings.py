@@ -1,4 +1,4 @@
-JAM_DATASET_PATH=R'/kaggle/input/musical-chord-dataset/audio'
+JAM_DATASET_PATH=R'/kaggle/input/musical-chord-dataset'
 MY_DATASET_PATH="D:/dataset/osu"
 OSU_KEY_DATASET_PATH="D:/dataset/osu_key"
 MISC_DATASET_PATH="D:/dataset/misc"
