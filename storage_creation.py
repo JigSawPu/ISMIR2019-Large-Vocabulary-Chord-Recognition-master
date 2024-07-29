@@ -11,9 +11,9 @@ from mir import io
 def create_jams_storage():
     jam=datasets.create_jam_dataset()
     jam.append_extractor(CQTV2,'cqt')
-    jam.activate_proxy('cqt',thread_number=8,free=True)
+    jam.activate_proxy('cqt',thread_number=2,free=True)
     jam.append_extractor(FrameCount,'n_frame',source='cqt')
-    jam.activate_proxy('n_frame',thread_number=8,free=True)
+    jam.activate_proxy('n_frame',thread_number=2,free=True)
     storage_jam_xchord=FramedH5DataStorage('dataset/jams_xchord',dtype=np.int32)
     if(not storage_jam_xchord.created):
         storage_jam_xchord.create_and_cache(jam.entries,'xchord')
